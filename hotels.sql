@@ -21,6 +21,7 @@ CREATE TABLE hotels (
     adress varchar(255) NOT NULL,
     telefon char(9) NOT NULL,
     id_cadena_hotelera char(9),
+    tipus_hotel enum("platja","muntanya") NOT NULL,
     constraint pk_hotels  PRIMARY KEY(id_ciutat, nom),
     constraint fk_cadena_hotelera FOREIGN KEY(id_cadena_hotelera) REFERENCES cadena_hotelera(CIF)
 );
